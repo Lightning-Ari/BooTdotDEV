@@ -1,21 +1,34 @@
 class Human:
     def sprint_right(self) -> None:
-        pass
+        self.__raise_if_cannot_sprint()
+        self.__use_sprint_stamina()
+        self.move_right()
+        self.move_right()
 
     def sprint_left(self) -> None:
-        pass
+        self.__raise_if_cannot_sprint()
+        self.__use_sprint_stamina()
+        self.move_left()
+        self.move_left()
 
     def sprint_up(self) -> None:
-        pass
+        self.__raise_if_cannot_sprint()
+        self.__use_sprint_stamina()
+        self.move_up()
+        self.move_up()
 
     def sprint_down(self) -> None:
-        pass
+        self.__raise_if_cannot_sprint()
+        self.__use_sprint_stamina()
+        self.move_down()
+        self.move_down()
 
     def __raise_if_cannot_sprint(self) -> None:
-        pass
+        if self.__stamina < 1:
+            raise Exception("not enough stamina to sprint")
 
     def __use_sprint_stamina(self) -> None:
-        pass
+        self.__stamina -= 1
 
     # don't touch below this line
 

@@ -1,4 +1,4 @@
-from main import Human
+from Abstraction.L3.main import Human
 
 HumanArgs = tuple[int, int, int, int]
 ExpectedOutput = tuple[int, int, str | None]
