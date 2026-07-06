@@ -22,3 +22,5 @@ restaurant2 = Restaurant("Wow! Momo", "MOMO")
 
 restaurant1.describe_restaurant()
 restaurant2.describe_restaurant()
+
+#test
