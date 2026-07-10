@@ -24,12 +24,11 @@ class ListExercise:
     def len_list(self) -> int:
         return len(self.list)
     
-    def is_empty(self) -> str:
+    def is_empty(self) -> bool:
         if len(self.list) <=0 :
-            result = "The list is empty"
-            return result
+            return True
         else :
-            return "Not Empty"
+            return False
 
 
 
@@ -43,6 +42,7 @@ while True:
     print("Show item by item select cap A")
     print("check a element of the list select e")
     print("Show the length of list L")
+    print("Check the list is empty? small i")
     print("Quite the code select small q")
 
     # taking user input
@@ -80,6 +80,12 @@ while True:
     if user_input == "L":
         result = new_list.len_list()
         print(f"Length of the list: {result}")
+    
+    #is empty ?
+    if user_input == "i":
+        result = new_list.is_empty()
+        print(f"Is the list empty? {result}")
+
 
     print()
     print()
