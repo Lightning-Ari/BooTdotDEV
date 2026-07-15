@@ -33,4 +33,29 @@ result: int = distint_list[high_count_indx]
 
 print(f"Mode : {result}")
 
-hello 
+"""
+This function calculates the mode using an optimized frequency dictionary. 
+Inside the for loop, I leverage the .get() method with a fallback default of zero. 
+This allows me to safely increment the tally for existing items and initialize new items in a single, clean line of code, 
+completely eliminating the need for an explicit if/else block.
+
+Once the frequency map is built in linear time, I pass the dictionary to the max() function using key=frequency.get. 
+This evaluates the hidden count scores and directly returns the element that appeared the most frequently."
+"""
+
+def find_mode(arr: list[int])-> int :
+    frequency: dict[int, int] = {}
+    
+    # Count occurrences of each element
+    for item in arr:
+        frequency[item] = frequency.get(item, 0) + 1
+    
+    # Find the key with the maximum value
+    mode: int = int(max(frequency, key=frequency.get))
+    return mode
+
+# Test the function
+List_test: list[int] = [1, 3, 3, 2, 1, 1, 4, 3, 3]
+result = find_mode(List_test)
+print(f"List: {List_test}")
+print(f"Mode: {result}")
